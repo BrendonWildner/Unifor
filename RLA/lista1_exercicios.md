@@ -4,6 +4,34 @@
 
 ## Lista 1 de exercícios
 
+### Exercício 2
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um funcionário. Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão aumento de 20%; os demais terão aumento de 10%.
+
+###Fluxograma
+```mermaid
+flowchart TD
+A([INICIAR]) --> B{{Digite seu salario: }}
+B --> D[/salario/]
+D --> E{salario <= 500}
+E --N--> F[novo_salario = salario + salario * 0.1]
+E --S--> G[novo_salario = salario + salario * 0.2]
+F --> H{{"Seu novo salario: " + novo_salario}}
+G --> H
+```
+###Pseudocódigo
+```
+DECLARAR salario, novo_salario FLUTUANTE
+ESCREVER "Digite seu salario: "
+LEIA salario
+SE salario <= 500 ENTAO
+	novo_salario = salario + salario * 0.2
+	ESCREVER "Seu novo salario: " + novo_salario"
+SENAO
+	novo_salario = salario + salario * 0.1
+	ESCREVER "Seu novo salario: " + novo_salario"
+FIM
+```
+
 ### Exercício 3
 Represente, em fluxograma e pseudocódigo, um algoritmo para determinar se um número inteiro e positivo é par ou impar.
 
@@ -23,9 +51,8 @@ G --S--> I{{Numero Par}}
 H --> J
 I --> J
 ```
-
+###Pseudocódigo
 ```
-ALGORITMO verificar_par_impar
 DECLARE num, resto INTEIRO
 ESCREVA "Digite um numero: "
 LEIA num
