@@ -95,3 +95,31 @@ SENAO
 	ESCREVA "O numero deve ser positivo"
 FIM
 ```
+
+### Exercício 4
+Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. Caso não atender a restrição de idade, calcular quantos anos faltam para o candidato estar apto.
+
+### Fluxograma
+```mermaid
+flowchart TD
+A([INICIO]) --> B{{Digite sua idade: }}
+B --> C[/idade/]
+C --> D{{idade >= 18}}
+D --N--> F[idade_falta = 18 - idade]
+F --> G{{Falta  + idade_falta + anos para tirar CNH.}}
+D --S--> E{{Pode tirar CNH}}
+G --> H([Fim])
+E --> H
+```
+###Pseudocódigo
+```
+DECLARAR idade, idade_falta INTEIRO
+ESCREVER "Digite sua idade: "
+LEIA idade
+SE idade >= 18 ENTAO
+	ESCREVER "Pode tirar CNH"
+SENAO
+	idade_falta = 18 - idade
+	ESCREVER "Falta " + idade_falta + " anos para tirar CNH"
+FIM
+```
