@@ -36,7 +36,7 @@ SENAO
 ### Exercício 2
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um funcionário. Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão aumento de 20%; os demais terão aumento de 10%.
 
-###Fluxograma
+### Fluxograma
 ```mermaid
 flowchart TD
 A([INICIAR]) --> B{{Digite seu salario: }}
@@ -47,7 +47,7 @@ E --S--> G[novo_salario = salario + salario * 0.2]
 F --> H{{"Seu novo salario: " + novo_salario}}
 G --> H
 ```
-###Pseudocódigo
+### Pseudocódigo
 ```
 DECLARAR salario, novo_salario FLUTUANTE
 ESCREVER "Digite seu salario: "
@@ -80,7 +80,7 @@ G --S--> I{{Numero Par}}
 H --> J
 I --> J
 ```
-###Pseudocódigo
+### Pseudocódigo
 ```
 DECLARE num, resto INTEIRO
 ESCREVA "Digite um numero: "
@@ -111,7 +111,7 @@ D --S--> E{{Pode tirar CNH}}
 G --> H([Fim])
 E --> H
 ```
-###Pseudocódigo
+### Pseudocódigo
 ```
 DECLARAR idade, idade_falta INTEIRO
 ESCREVER "Digite sua idade: "
