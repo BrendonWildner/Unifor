@@ -4,6 +4,35 @@
 
 ## Lista 1 de exercícios
 
+### Exercício 1
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado;
+
+### Fluxograma
+```mermaid
+flowchart TD
+A([INICIAR]) -->B{{Digite a nota 1: }}
+B --> C[/nota1/]
+C --> D{{Digite a nota 2: }}
+D --> E[/nota2/]
+%%Usar " " para adicionar simbolos sem interferência
+E --> G["media = (nota1 + nota2) / 2"]
+G --> H{media >= 7}
+H --S--> I{{APROVADO}}
+H --N--> J{{REPROVADO}}
+```
+###Pseudocódigo
+```
+DECLARE nota1, nota2, media FLUTUANTE
+ESCREVER "Digite a nota 1:" 
+LEIA nota1
+ESCREVER "Digite a nota 2:" 
+LEIA nota2
+media = (nota1 + nota2 / 2)
+SE media >= 7 ENTAO
+	ESCREVER("APROVADO")
+SENAO
+	ESCREVER("REPROVADO")
+```
 ### Exercício 2
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um funcionário. Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão aumento de 20%; os demais terão aumento de 10%.
 
